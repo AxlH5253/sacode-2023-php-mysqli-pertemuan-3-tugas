@@ -44,7 +44,13 @@
                         <td scope="row"><?= $data['alamat'] ?></td>
                         <td scope="row"><?= $data['email'] ?></td>
                         <td scope="row"><?= $data['whatsapp'] ?></td>
-                        <td scope="row"></td>
+                        <td scope="row">
+                            <a href="edit.php?id=<?=$data['id']?>" class="btn btn-warning ms-3">Edit</a>
+                            <form action="delete.php" method="post" class="d-inline">
+                                <input type="hidden" name="id" value="<?=$data['id']?>">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 </tbody>
                 <?php } ?>
